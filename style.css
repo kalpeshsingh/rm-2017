@@ -1,0 +1,128 @@
+/* start page stepup */
+body {
+    background: #edeff0;
+    color: #576366;
+    min-height: 100vh;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* end page stepup */
+
+.row {
+    display: block;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    display: inline-flex;
+    transition: transform 0.3s ease;
+}
+
+/* .container::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 140px;
+    right: 140px;
+    height: 4px;
+    background-color: #6adb55;
+} */
+
+.col {
+    margin: 40px;
+    width: 200px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+}
+
+/* .col::before {
+    content: '';
+    display: block;
+    background-color: #6adb55;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 4px;
+    height: 20px;
+} */
+
+/* .col::after {
+    content: '';
+    display: block;
+    background-color: #6adb55;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 280px;
+    height: 4px;
+} */
+
+/* .col.has-children::after {
+    content: '';
+    display: block;
+    background-color: #6adb55;
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    width: 4px;
+    height: 60px;
+} */
+
+/* always show first row cards (root nodes) */
+.container:first-child > .col {
+    display: block;
+}
+.row:first-child .container > .col::before {
+    content: none;
+}
+
+/* start card design */
+.card {
+    position: relative;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.06);
+    border-radius: 5px 5px 4px 4px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.card__header {
+    background-color: #ff757c;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+.card__header.is-active {
+    background-color: #e15258;
+}
+
+.card__body {
+    padding: 12px;
+}
+
+.card__title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.card__subtitle {
+    font-size: 14px;
+}
+/* end card design */
+
+/* helper classes */
+.is-visible {
+    display: block !important;
+}
+.is-disabled {
+    opacity: 0.45;
+    pointer-events: none;
+}
+
